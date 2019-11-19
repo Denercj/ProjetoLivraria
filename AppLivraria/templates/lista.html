@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title  %}Lista de Livro{% endblock %}
+
+{% block conteudo %}
+
+	<h3>Lista de Livros</h3>
+	
+	<table>
+	
+  <tr>
+    <th>Título</th>
+    <th>Autor</th>
+    <th>Editora</th>
+    <th>Páginas</th>
+    <th>Preço</th>
+    
+  </tr>
+  	
+  	{% for livro in livros %}
+  	 <tr>
+  	 	<th>{{ livro.titulo }}</th>
+  	 	<th>{{ livro.editora }}</th>
+  	 	<th>{{ livro.numero_paginas }}</th>
+  	 	<th>{{ livro.preco }}</th>
+  	   </tr>
+	{% endfor %}
+	</table>
+
+{% endblock %}

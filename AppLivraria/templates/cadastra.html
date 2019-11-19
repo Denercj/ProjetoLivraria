@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title  %}Cadastro de Livro{% endblock %}
+
+{% block conteudo %}
+
+	<h3>Cadastro de Livro</h3>
+	<p>Cadastre o livro com as informações abaixo:</p>
+
+	<form method="post">
+		{% csrf_token %}
+		
+		<label>Título:</label>
+		{{ form.titulo }}
+		
+		<br>
+		
+		<label>Autor:</label>
+		{{ form.autor }}
+		
+		<br>
+		
+	
+		<label>Editora:</label>
+		{{ form.editora }}
+		
+		<br>
+		
+		<label>Número de Páginas:</label>
+		{{ form.numero_paginas }}
+		
+		<br>
+		
+		<label>Preço:</label>
+		{{ form.preco }}
+		
+		<br>
+		
+		<button>CADASTRAR</button>
+		
+	</form>
+	<p><a href="{% url 'index' %}">CANCELAR</a></p>
+	
+{% endblock %}

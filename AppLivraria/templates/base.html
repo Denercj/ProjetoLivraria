@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			{% block title %}Sistema Livraria{% endblock %}
+		</title>
+	</head>
+
+	<body>
+	
+		<h1>Sistema Livraria</h1>
+		<p><a href="{% url 'index' %}">Volta para página inicial</a></p>
+		
+		{% block conteudo %}{% endblock %}
+		
+		<p>Copyright 2019 - Versão beta 0.01 </p>
+	</body>
+	
+	
+</html>
